@@ -1,0 +1,112 @@
+* {
+  margin: 0px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+
+  .container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+      min-height: 80vh;
+      width: 35rem;
+      border-radius: 30px;
+      padding: 0rem 5rem;
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1),
+        0px 0px 50px rgba(0, 0, 0, 0.1);
+      transform-style: preserve-3d;
+
+      .sneaker {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 35vh;
+        position: relative;
+
+        img {
+          width: 20rem;
+          transition: 0.4s all ease-in-out;
+        }
+
+        .circle {
+          width: 15rem;
+          height: 15rem;
+          border-radius: 100%;
+          background: linear-gradient(
+            to right,
+            rgba(245, 70, 66, 0.75),
+            rgba(8, 83, 156, 0.75)
+          );
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+      }
+
+      .info {
+        transition: 0.4s all ease-in-out;
+        h1 {
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          padding: 2rem 0rem;
+          font-weight: lighter;
+          color: #585858;
+        }
+
+        .sizes {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: 0.4s all ease-in-out;
+
+          button {
+            padding: 0.5rem 2rem;
+            background: none;
+            border: none;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+            cursor: pointer;
+            color: #585858;
+          }
+
+          .active {
+            background: #585858;
+            color: white;
+          }
+        }
+
+        .purchase {
+          margin-top: 5rem;
+          transition: 0.4s all ease-in-out;
+
+          button {
+            width: 100%;
+            padding: 1rem 0rem;
+            background: #f54642;
+            border-radius: 30px;
+            font-weight: bolder;
+            border: none;
+            text-align: center;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
